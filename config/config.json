@@ -9,10 +9,109 @@
           "manifest": "./src/extensions/extension/ExtensionApplicationCustomizer.manifest.json"
         }
       ]
+    },
+    "biblioteca-conceito-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/bibliotecaConceito/BibliotecaConceitoWebPart.js",
+          "manifest": "./src/webparts/bibliotecaConceito/BibliotecaConceitoWebPart.manifest.json"
+        }
+      ]
+    },
+    "cadastro-edicao-ideia-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/cadastroEdicaoIdeia/CadastroEdicaoIdeiaWebPart.js",
+          "manifest": "./src/webparts/cadastroEdicaoIdeia/CadastroEdicaoIdeiaWebPart.manifest.json"
+        }
+      ]
+    },
+    "cadastro-ideia-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/cadastroIdeia/CadastroIdeiaWebPart.js",
+          "manifest": "./src/webparts/cadastroIdeia/CadastroIdeiaWebPart.manifest.json"
+        }
+      ]
+    },
+    "carrosel-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/carrosel/CarroselWebPart.js",
+          "manifest": "./src/webparts/carrosel/CarroselWebPart.manifest.json"
+        }
+      ]
+    },
+    "central-aprovacao-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/centralAprovacao/CentralAprovacaoWebPart.js",
+          "manifest": "./src/webparts/centralAprovacao/CentralAprovacaoWebPart.manifest.json"
+        }
+      ]
+    },
+    "faq-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/faq/FaqWebPart.js",
+          "manifest": "./src/webparts/faq/FaqWebPart.manifest.json"
+        }
+      ]
+    },
+    "menu-inferior-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/menuInferior/MenuInferiorWebPart.js",
+          "manifest": "./src/webparts/menuInferior/MenuInferiorWebPart.manifest.json"
+        }
+      ]
+    },
+    "notificacoes-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/notificacoes/NotificacoesWebPart.js",
+          "manifest": "./src/webparts/notificacoes/NotificacoesWebPart.manifest.json"
+        }
+      ]
+    },
+    "timeline-conceitos-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/timelineConceitos/TimelineConceitosWebPart.js",
+          "manifest": "./src/webparts/timelineConceitos/TimelineConceitosWebPart.manifest.json"
+        }
+      ]
+    },
+    "upload-ideia-conceito-mockup-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/uploadIdeiaConceitoMockup/UploadIdeiaConceitoMockupWebPart.js",
+          "manifest": "./src/webparts/uploadIdeiaConceitoMockup/UploadIdeiaConceitoMockupWebPart.manifest.json"
+        }
+      ]
+    },
+    "veja-mais-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/vejaMais/VejaMaisWebPart.js",
+          "manifest": "./src/webparts/vejaMais/VejaMaisWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "ExtensionApplicationCustomizerStrings": "lib/extensions/extension/loc/{locale}.js"
+    "ExtensionApplicationCustomizerStrings": "lib/extensions/extension/loc/{locale}.js",
+    "BibliotecaConceitoWebPartStrings": "lib/webparts/bibliotecaConceito/loc/{locale}.js",
+    "CadastroEdicaoIdeiaWebPartStrings": "lib/webparts/cadastroEdicaoIdeia/loc/{locale}.js",
+    "CadastroIdeiaWebPartStrings": "lib/webparts/cadastroIdeia/loc/{locale}.js",
+    "CarroselWebPartStrings": "lib/webparts/carrosel/loc/{locale}.js",
+    "CentralAprovacaoWebPartStrings": "lib/webparts/centralAprovacao/loc/{locale}.js",
+    "FaqWebPartStrings": "lib/webparts/faq/loc/{locale}.js",
+    "MenuInferiorWebPartStrings": "lib/webparts/menuInferior/loc/{locale}.js",
+    "NotificacoesWebPartStrings": "lib/webparts/notificacoes/loc/{locale}.js",
+    "TimelineConceitosWebPartStrings": "lib/webparts/timelineConceitos/loc/{locale}.js",
+    "UploadIdeiaConceitoMockupWebPartStrings": "lib/webparts/uploadIdeiaConceitoMockup/loc/{locale}.js",
+    "VejaMaisWebPartStrings": "lib/webparts/vejaMais/loc/{locale}.js"
   }
 }
