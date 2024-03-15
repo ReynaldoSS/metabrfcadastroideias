@@ -1,9 +1,46 @@
 import * as React from 'react';
 import styles from './BibliotecaConceito.module.scss';
 import type { IBibliotecaConceitoProps } from './IBibliotecaConceitoProps';
-import { escape } from '@microsoft/sp-lodash-subset';
+import {
+  IBibliotecaConceitoState  
+} from "./IBibliotecaConceitoState";
+import axios from "axios";
+import { ITermOld } from "../../../interfaces/ITermOld";
+import { IGuideTermSet } from "../../../interfaces/IGuideTermSet";
+import { ITermSetOld } from "../../../interfaces/ITermSetOld";
+import { ITermSetGroupOld } from "../../../interfaces/ITermSetGroupOld";
+import { sp } from "@pnp/sp";
+import {
+  Callout,
+  Checkbox,
+  css,
+  DirectionalHint,
+  FontIcon,
+  GroupedList,
+  IShimmerColors,
+  Link,
+  Panel,
+  Shimmer,
+  ShimmerElementType,
+  Slider,
+  Text,
+} from "@fluentui/react";
 
-export default class BibliotecaConceito extends React.Component<IBibliotecaConceitoProps, {}> {
+const headers = {
+  headers: {
+    Accept: "application/json; odata=verbose;",
+  },
+};
+const shimmerColor: IShimmerColors = {
+  shimmerWave: "#febb6b",
+  // background: '#faf9f8'
+};
+const orderBy: ITermOld[] = [
+  { id: "true", nome: "A-Z" },
+  { id: "false", nome: "Z-A" },
+];
+
+export default class BibliotecaConceito extends React.Component<IBibliotecaConceitoProps, IBibliotecaConceitoState> {
   public render(): React.ReactElement<IBibliotecaConceitoProps> {
     const {
       description,

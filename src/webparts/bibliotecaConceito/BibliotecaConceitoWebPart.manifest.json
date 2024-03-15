@@ -17,12 +17,12 @@
 
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
-    "group": { "default": "Advanced" },
-    "title": { "default": "BibliotecaConceito" },
-    "description": { "default": "BibliotecaConceito description" },
-    "officeFabricIconFontName": "Page",
+    "group": { "default": "Other" },
+    "title": { "default": "Biblioteca de Conceito" },
+    "description": { "default": "App para exibir Conceitos/Ideias armazenados(as)." },
+    "officeFabricIconFontName": "Library",
     "properties": {
-      "description": "BibliotecaConceito"
+      "description": "Biblioteca de Conceito"
     }
   }]
 }

@@ -1,34 +1,234 @@
 @import '~@fluentui/react/dist/sass/References.scss';
 
 .bibliotecaConceito {
-  overflow: hidden;
-  padding: 1em;
-  color: "[theme:bodyText, default: #323130]";
-  color: var(--bodyText);
-  &.teams {
-    font-family: $ms-font-family-fallbacks;
+  .shimmer,
+  .filters {
+    margin-bottom: 48px;
+  }
+  .filters {
+    position: relative;
+    display: flex;
+    font-size: 13px;
+    .lineFilter {
+      display: flex;
+      margin-right: 24px;
+      b {
+        margin-right: 8px;
+      }
+      .dadoFilter {
+        cursor: pointer;
+        display: flex;
+        height: fit-content;
+        span {
+          color: "[theme: themePrimary]";
+        }
+        span:last-child {
+          margin: 4px 0 0 8px;
+          font-size: 8px;
+        }
+      }
+      .metadadoFilterDiviser {
+        margin: 0 8px;
+      }
+      .filtering {
+        font-weight: 500;
+        color: "[theme: themePrimary]";
+      }
+      .itemFilter {
+        display: flex;
+        .name {
+          margin-right: 8px;
+        }
+      }
+    }
+    .iconFilter {
+      position: absolute;
+      right: 0;
+      font-size: 14px;
+      color: "[theme: themePrimary]";
+      padding: 9px;
+      margin: -9px;
+    }
+    .iconFilter:hover {
+      cursor: pointer;
+      border-radius: 2px;
+      background-color: #f3f2f1;
+    }
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    h2 {
+      color: "[theme: themePrimary]";
+      display: block;
+      margin: auto;
+      opacity: 0.5;
+      font-weight: 500;
+      font-size: 28px;
+    }
+    .item {
+      display: flex;
+      margin-bottom: 48px;
+      .imgBox {
+        display: flex;
+        align-items: center;
+        width: 179px;
+        // height: 179px;
+        border: 1px solid #febb6b;
+        box-sizing: border-box;
+        padding: 9.5px;
+        border-radius: 2px;
+        // margin: auto 0;
+        margin-right: 24px;
+        img {
+          width: 100%;
+        }
+      }
+      .desc {
+        width: 179px;
+        h4 {
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 27px;
+          margin: 0 0 8px;
+        }
+        .linha {
+          display: flex;
+          span {
+            display: block;
+            font-size: 12px;
+            line-height: 17px;
+          }
+          .coluna {
+            width: 55px;
+          }
+          .dado {
+            margin-left: 8px;
+            font-weight: bold;
+          }
+        }
+        a {
+          display: block;
+          margin-top: 8px;
+          font-size: 12px;
+          line-height: 17px;
+          color: "[theme: themePrimary]";
+          text-decoration: none;
+        }
+      }
+    }
   }
 }
-
-.welcome {
-  text-align: center;
+.callout {
+  background: white;
+  width: 140px;
+  .itemCallout {
+    padding: 8px 12px;
+  }
+  .itemCallout:hover {
+    background-color: #f3f2f1;
+    cursor: pointer;
+  }
 }
-
-.welcomeImage {
-  width: 100%;
-  max-width: 420px;
-}
-
-.links {
-  a {
-    text-decoration: none;
-    color: "[theme:link, default:#03787c]";
-    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
-
-    &:hover {
-      text-decoration: underline;
-      color: "[theme:linkHovered, default: #014446]";
-      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+.panelFilter {
+  .iconClearFilter {
+    position: absolute;
+    top: 27px;
+    right: 60px;
+    padding: 9px;
+    margin: -9px;
+    color: "[theme: themePrimary]";
+  }
+  .iconClearFilter:hover {
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #f3f2f1;
+  }
+  .section {
+    .head {
+      display: flex;
+      align-items: center;
+      position: relative;
+      font-size: 16px;
+      height: 20px;
+      font-weight: 600;
+      margin: 0px -24px 0;
+      padding: 13px 16px;
+      cursor: pointer;
+      i {
+        right: 16px;
+        position: absolute;
+      }
     }
+    .head:hover {
+      background-color: #f3f2f1;
+    }
+    .diviser{
+      margin: -1px -10px 0;
+      border-bottom: 1px solid #edebe9;
+    }
+    .body {
+      margin: 16px 0 18px;
+      .content {
+        padding: 8px 0;
+      }
+      .content:first-of-type {
+        padding: 0 0 8px;
+      }
+      .slider {
+        margin-top: -6px;
+      }
+    }
+  }
+  .section:first-of-type{
+    margin-top: 18px;
+  }
+}
+.upPage {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .bibliotecaConceito {
+    .shimmer,
+    .filters {
+      margin-bottom: 24px;
+    }
+    .filters {
+      .lineFilter:last-of-type {
+        display: none;
+      }
+    }
+    .container {
+      flex-wrap: nowrap;
+      align-content: center;
+      flex-direction: column;
+      justify-content: center;
+      .item {
+        margin-bottom: 32px;
+        .imgBox {
+          margin-right: 18px;
+        }
+        .imgBox,
+        .desc {
+          width: 160px;
+        }
+      }
+    }
+  }
+  .upPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 85%;
+    right: 16px;
+    box-shadow: 0px 6.4px 14.4px rgba(0, 0, 0, 0.132), 0px 1.2px 3.6px rgba(0, 0, 0, 0.108);
+    border-radius: 16px;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    z-index: 99;
   }
 }
