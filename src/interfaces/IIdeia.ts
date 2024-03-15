@@ -1,0 +1,26 @@
+export interface IIdeia{
+	titulo?:string;
+	nome?:string;
+	negocio?:string;
+	categoria?:string;
+	familia?:string;
+	mercado?:string;
+	marca?:string;
+	plataforma?:string;
+	subMarca?:string;
+	produtoAtual?:string;
+	descontinuado?:string;
+	produtoEmbalagem?:string;
+	olheiros?:string;
+	fornecedor?:string;
+	arquetipo?:string;
+	ano?:string;
+	tipoTeste?:string;
+	statusAprovacao?:string;
+	autor?:string;
+	dataCadastro?:Date;
+	ultimaAtualizacao?:Date;
+	avaliador?:string;
+	dataAvaliacao?:Date;
+	observacoes?:string;
+}
